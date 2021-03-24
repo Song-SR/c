@@ -4,5 +4,8 @@
         "cmath": "c",
         "type_traits": "c",
         "typeinfo": "c"
+    },
+    "files.exclude": {
+        "**/*.exe": true
     }
 }
