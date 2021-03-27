@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 typedef struct {
     char *name;
@@ -25,11 +26,12 @@ int main(void){
     while(1){
         printf("포켓몬 뽑기! 아무키나 누르세요!");
         getchar();
+        system("cls");
         gamble++;
 
         int selected = rand() % 5;
         printMon(selected);
-        collection[selected] = 1;
+        collection[selected] += 1;
 
         int collectAll = checkCollection();
         printf("지금까지 뽑은 횟수 : %d\n", gamble);
@@ -78,10 +80,10 @@ int checkCollection(){
     printf("========보유 목록========\n");
     for(int i = 0; i < 5; i++){
         if(collection[i] == 0){
-            printf("%10s", "(미수집)");
+            printf("%11s", "(미수집)");
             collectAll = 0;
         }else{
-            printf("%10s", mons[i].name);
+            printf("%9sx%d", mons[i].name, collection[i]);
         }
     }
     printf("\n=========================\n");

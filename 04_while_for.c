@@ -21,6 +21,6 @@ int main(){
         printf("\n");
     }
 
-    // ì¡°ê±´ë¬¸, break, continue, &&, ||, switch - case, 
+    // Á¶°Ç¹®, break, continue, &&, ||, switch - case, 
 
 }
