@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 int arrayAnimal[4][5];  // 동물카드 20장 중에서 일치하는 것 뒤집기
 int checkAnimal[4][5];
@@ -31,21 +32,23 @@ int main(void){
     while(1){
         int select1 = 0;
         int select2 = 0;
-
-        printAnimals();
+        
+        // printAnimals(); 정답
         printQuestion();
         printf("뒤집을 카드 2개 선택 : ");
         scanf("%d %d", &select1, &select2);
+
+        system("cls");
 
         if(select1 == select2){
             continue;
         }
 
-        int firstSelect_x = conv_pos_x(select1);
-        int firstSelect_y = conv_pos_y(select1);
+        int firstSelect_x = conv_pos_x(select1-1);
+        int firstSelect_y = conv_pos_y(select1-1);
 
-        int secondSelect_x = conv_pos_x(select2);
-        int secondSelect_y = conv_pos_y(select2);
+        int secondSelect_x = conv_pos_x(select2-1);
+        int secondSelect_y = conv_pos_y(select2-1);
 
         if((checkAnimal[firstSelect_x][firstSelect_y] == 0
            && checkAnimal[secondSelect_x][secondSelect_y] == 0)
@@ -146,7 +149,7 @@ void printAnimals(){
 
 void printQuestion(){
     printf("\n\n(문제)\n");
-    int seq = 0;
+    int seq = 1;
 
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 5; j++){
