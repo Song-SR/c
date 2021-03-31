@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void function(int num);  // ì„ ì–¸
+void function(int num);  // ¼±¾ğ
 int function2(int num);
 
 int main(){
@@ -10,7 +10,7 @@ int main(){
     return 0;
 }
 
-void function(int num){  // ì •ì˜
+void function(int num){  // Á¤ÀÇ
     printf("num : %d", num);
 }
 

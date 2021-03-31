@@ -4,7 +4,7 @@
 
 int main(){
 
-    srand(time(NULL));  // ë§¤ ì‹œì‘ì‹œ ë‹¤ë¥´ê²Œ ë™ì‘í•˜ê²Œë”
+    srand(time(NULL));  // ¸Å ½ÃÀÛ½Ã ´Ù¸£°Ô µ¿ÀÛÇÏ°Ô²û
     rand(); rand(); rand();
     int i = rand();
     printf("%d\n", i);
